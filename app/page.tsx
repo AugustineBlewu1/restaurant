@@ -1,113 +1,129 @@
+"use client";
+
 import Image from "next/image";
+
+const navigation = [
+  { name: "Product", href: "#" },
+  { name: "Features", href: "#" },
+  { name: "Marketplace", href: "#" },
+  { name: "Company", href: "#" },
+];
+const chefs = [
+  { name: "Aiden Hunter", image: "aiden.jpg", tag: "Founder" },
+  { name: "Ethel Ramsey", image: "ethel.jpg", tag: "Co-Founder" },
+  { name: "Fannie Stewart", image: "fainel.jpg", tag: "Co-Founder" },
+];
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
+    <main>
+      <section>
+      <header className="absolute inset-x-0 top-0 z-10">
+        <nav
+          className="flex items-center justify-between p-6 lg:p-8 lg:px-36"
+          aria-label="Restaurant"
+        >
+          <h3 className="font-bold text-2xl text-white">Logo</h3>
+          <div className="flex flex-row">
+            <div className="lg:flex lg:gap-x-16 ">
+              {navigation?.map((e: any) => (
+                <a
+                  key={e.name}
+                  className="leading-6 text-white font-medium text-2xl hover:cursor-pointer hover:underline"
+                >
+                  {e?.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div className="relative isolate overflow-hidden ">
+        <img
+          src={"/background.jpg"}
+          alt="Restaurant Image"
+          className="absolute inset-0 -z-10 w-screen h-screen object-cover"
+        />
+        <div
+          className="absolute inset-x-0 -top-30 -z-10 transform-gpu overflow-hidden blur-3xl  sm:-top-80"
+          aria-hidden="true"
+        >
+          <div className="relative  aspect-[1455/578]  bg-gradient-to-tr from-[#0c0709] to-[#030212] opacity-80  sm:w-full" />
+        </div>
+
+        <div className="w-1/2 h-screen px-28 leading-relaxed py-24">
+          <h4 className="text-white text-start font-bold text-7xl h-auto ">
+            Get Cashback <br /> up to 50%
+          </h4>
+          <p className="text-white font-light py-14">
+            The aroma of freshly baked bread mingled with the scent of simmering
+            garlic and herbs, filling the cozy kitchen. A pot of rich, creamy
+            tomato soup bubbled gently on the stove, promising warmth and
+            comfort. Nearby, a platter of vibrant, roasted vegetables awaited
+            their turn to delight eager taste buds.
+          </p>
+
           <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#"
+            className="rounded-full bg-primary-red px-12 py-4 text-sm font-semibold text-white hover:text-primary-red shadow-sm hover:bg-primary-lightred focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:bg-primary-lightred"
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+            ORDER NOW
           </a>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
+      </section>
+      <section className=" w-screen text-center justify-center">
+        <div className="py-12 absolute w-full h-screen bg-primary-lightred">
+          <h3 className="text-2xl font-bold text-primary-red "> Our Chef</h3>
+          <p className="font-light text-center text-primary-red ">
+            Nearby, a platter of vibrant, roasted vegetables <br /> awaited
+            their turn to delight eager taste buds.
           </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          <div className="flex flex-row space-x-4 gap-x-32 justify-center py-10">
+            {chefs?.map((e) => (
+              <div className="flex flex-col hover:cursor-pointer" key={e?.name}>
+                <div className="h-52 w-52 rounded-full inline-block overflow-hidden">
+                  <img
+                    src={`/${e?.image}`}
+                    alt={e?.name}
+                    className=" h-full w-full  "
+                  />
+                </div>
+                <span className="font-medium text-2xl text-primary-red uppercase pt-4">
+                  {e?.name}
+                </span>
+                <span className="font-light pt-2 text-primary-red">
+                  {e?.tag}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="relative h-screen">
+          <img
+            src={"/background-vector.png"}
+            alt="Restaurant Image"
+            className="object-cover"
+          /> 
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <section className="bg-primary-red w-screen text-center justify-center">
+        <div className="w-full h-screen">
+          <div className="flex flex-row justify-center py-44 items-center space-x-32">
+          <div  className="h-96 w-96 bg-white rounded-full inline-block overflow-hidden">
+            <img src={`/burger.jpg`} alt="Burger" className="h-full w-full" />
+          </div>
+          <div className="w-80 text-start">
+            <h3 className="font-bold text-5xl">Best Burger</h3>
+            <p className="font-light py-12">A chef skillfully tossed vibrant vegetables in a sizzling wok, sending waves of savory steam into the air. Nearby, a vendor offered sweet, golden pastries, their sugary glaze sparkling in the afternoon sun</p>
+          </div>
+          </div>
+         
+        </div>
+      </section>
     </main>
   );
 }
