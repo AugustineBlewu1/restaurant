@@ -244,6 +244,75 @@ export default function Home() {
           />
         </div>
       </section>
+      <section className=" w-screen text-center justify-center">
+        <div className="relative w-full h-screen flex items-center justify-center">
+          <div className="absolute inset-0 bg-red-400">
+            <div className="absolute  opacity-20">
+              <img
+                src={"/food_table.jpg"}
+                alt="Restaurant Image"
+                className="object-cover w-screen h-screen"
+              />
+            </div>
+          </div>
+          <div className="relative mx-auto w-1/2 z-10">
+            <h3 className="font-medium text-2xl text-white">
+              A pot of rich, creamy tomato soup bubbled gently on the stove,
+              promising warmth and comfort. Nearby, a platter of vibrant,
+              roasted vegetables awaited their turn to delight eager taste buds.
+            </h3>
+            <h2 className="font-bold text-3xl py-8">Barry Henderson</h2>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-primary-lightred w-screen text-center justify-center">
+        <div className="absolute w-screen h-screen py-20  mx-auto flex justify-center items-center">
+          <div className="items-center">
+
+        
+          <h3 className="text-5xl font-bold text-primary-red py-2">
+            {" "}
+            Don't miss our update
+          </h3>
+          <h2 className="text-primary-red text-lg font-light ">
+            Awaited their turn to delight eager taste buds and <br />
+            Awaited their turn to delight eager taste buds
+          </h2>
+          <div className="py-16">
+            <input
+              type="text"
+              name=""
+              className="py-3 rounded-l-full w-96 pl-8"
+              placeholder="Enter your email"
+            />
+            <a
+              href="#"
+              className="rounded-r-full bg-primary-red px-12 py-4 text-sm font-semibold text-white hover:text-primary-red shadow-sm hover:bg-primary-lightred focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:bg-primary-lightred"
+            >
+              ORDER NOW
+            </a>
+          </div>
+          </div>
+        </div>
+        <div className="relative h-screen">
+          <img
+            src={"/background-side.png"}
+            alt="Restaurant Image"
+            className="object-cover "
+          />
+        </div>
+      </section>
+
+      <section className="bg-black w-screen h-screen">
+        <div className="flex flex-row"> 
+            <div className="text-white">
+              <h2>Title</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quibusdam, provident iure incidunt maiores voluptatem dolores sequi odit, cum, reiciendis totam debitis eaque repellendus illum commodi alias aliquam natus modi.</p>
+            </div>
+
+        </div>
+      </section>
     </main>
   );
 }
