@@ -18,7 +18,7 @@ const Footer = () => {
           {socialIcons?.map((e, i) => (
             <li className="block hover:cursor-pointer" key={i}>
               {" "}
-              <Image src={`/social/${e}`} alt={e}  width={0} height={0} sizes={"100vw"}  />{" "}
+              <Image src={`/social/${e}`} alt={e}  width={50} height={50} sizes={"100vw"}  />{" "}
             </li>
           ))}
         </span>
