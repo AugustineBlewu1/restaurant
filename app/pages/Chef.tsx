@@ -1,5 +1,6 @@
 import React from 'react'
 import { chefs } from '../contants'
+import Image from 'next/image'
 
 const Chef = () => {
   return (
@@ -15,10 +16,11 @@ const Chef = () => {
         {chefs?.map((e) => (
           <div className="flex flex-col hover:cursor-pointer" key={e?.name}>
             <div className="h-52 w-52 rounded-full inline-block overflow-hidden">
-              <img
+              <Image
                 src={`/${e?.image}`}
                 alt={e?.name}
-                className=" h-full w-full  "
+                className=" h-full w-full "
+                width={0} height={0} sizes={"100vw"} 
               />
             </div>
             <span className="font-medium text-2xl text-primary-red uppercase pt-4">
@@ -32,10 +34,11 @@ const Chef = () => {
       </div>
     </div>
     <div className="relative h-screen">
-      <img
+      <Image
         src={"/background-vector.png"}
         alt="Restaurant Image"
         className="object-cover"
+        width={0} height={0} sizes={"100vw"} 
       />
     </div>
   </section>

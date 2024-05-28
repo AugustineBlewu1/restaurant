@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Contents = () => {
   return (
@@ -6,10 +7,11 @@ const Contents = () => {
     <div className="relative w-full h-screen flex items-center justify-center">
       <div className="absolute inset-0 bg-red-400">
         <div className="absolute  opacity-20">
-          <img
+          <Image
             src={"/food_table.jpg"}
             alt="Restaurant Image"
             className="object-cover w-screen h-screen"
+            width={0} height={0} sizes={"100vw"} 
           />
         </div>
       </div>

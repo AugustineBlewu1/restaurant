@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const BurgerSecond = () => {
   return (
@@ -23,14 +24,15 @@ const BurgerSecond = () => {
               </a>
             </div>
             <div className="h-96 w-96 bg-white rounded-full inline-block overflow-hidden">
-              <img src={`/burger.jpg`} alt="Burger" className="h-full w-full" />
+              <Image src={`/burger.jpg`} alt="Burger" className="h-full w-full" width={0} height={0} sizes={"100vw"}  />
             </div>
           </div>
           <div className="absolute inset-0 z-0">
-            <img
+            <Image
               src={"/background-turn.png"}
               alt="Restaurant Image"
               className="object-cover w-full h-full"
+              width={0} height={0} sizes={"100vw"} 
             />
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { socialIcons } from '../contants'
+import Image from 'next/image'
 
 const Footer = () => {
   return (
@@ -17,7 +18,7 @@ const Footer = () => {
           {socialIcons?.map((e, i) => (
             <li className="block hover:cursor-pointer" key={i}>
               {" "}
-              <img src={`/social/${e}`} alt={e} />{" "}
+              <Image src={`/social/${e}`} alt={e}  width={0} height={0} sizes={"100vw"}  />{" "}
             </li>
           ))}
         </span>

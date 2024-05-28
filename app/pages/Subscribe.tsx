@@ -1,21 +1,23 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Subscribe = () => {
   return (
     <section className="bg-primary-lightred w-screen text-center justify-center">
     <div className="relative w-full  h-screen py-20 ">
       <div className="absolute inset-0">
-        <img
+        <Image
           src={"/background-side.png"}
           alt="Restaurant Image"
-          className="object-cover "
+          className="object-cover"
+          width={0} height={0} sizes={"100vw"} 
         />
       </div>
       <div className="relative z-10 w-screen mx-auto h-full flex justify-center items-center">
         <div className="items-center">
           <h3 className="text-5xl font-bold text-primary-red py-2">
-            {" "}
-            Don't miss our update
+            {"Don't miss our update "}
+       
           </h3>
           <h2 className="text-primary-red text-lg font-light">
             Awaited their turn to delight eager taste buds and <br />

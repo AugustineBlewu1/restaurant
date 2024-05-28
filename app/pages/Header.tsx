@@ -1,5 +1,6 @@
 import React from 'react'
 import { navigation } from '../contants'
+import Image from 'next/image'
 
 const Header = () => {
   return (
@@ -26,10 +27,12 @@ const Header = () => {
         </header>
 
         <div className="relative isolate overflow-hidden ">
-          <img
+          <Image 
+         
             src={"/background.jpg"}
             alt="Restaurant Image"
             className="absolute inset-0 -z-10 w-screen h-screen object-cover"
+            width={0} height={0} sizes={"100vw"} 
           />
           <div
             className="absolute inset-x-0 -top-30 -z-10 transform-gpu overflow-hidden blur-3xl  sm:-top-80"

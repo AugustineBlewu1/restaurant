@@ -1,15 +1,17 @@
 import React from 'react'
 import { packages } from '../contants'
+import Image from 'next/image'
 
 const PopularPackage = () => {
   return (
     <section className="bg-primary-lightred w-screen text-center justify-center">
         <div className="relative w-full h-screen py-20">
           <div className="absolute inset-0">
-            <img
+            <Image
               src="/background-side.png"
               alt="Restaurant Background"
               className="object-cover w-full h-full"
+              width={0} height={0} sizes={"100vw"}  
             />
           </div>
           <div className="relative z-10 w-full h-full py-20 bg-opacity-75 ">

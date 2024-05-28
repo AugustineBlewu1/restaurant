@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const BurgerFirst = () => {
   return (
@@ -6,7 +7,7 @@ const BurgerFirst = () => {
     <div className="w-full h-screen">
       <div className="flex flex-row justify-center py-44 items-center space-x-32">
         <div className="h-96 w-96 bg-white rounded-full inline-block overflow-hidden">
-          <img src={`/burger.jpg`} alt="Burger" className="h-full w-full" />
+          <Image src={`/burger.jpg`} alt="Burger" className="h-full w-full" width={0} height={0} sizes={"100vw"} />
         </div>
         <div className="w-96 text-start">
           <h3 className="font-bold text-5xl">Best Burger</h3>
